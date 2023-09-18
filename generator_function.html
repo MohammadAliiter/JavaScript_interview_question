@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> 
+             generator function Example
+        </title>
+    </head>
+    <body>
+        <script>
+            function* firstGenerator() {
+	yield 2;
+	yield 3;
+}
+
+function* secondGenerator() {
+	yield 1;
+	yield* firstGenerator();
+	yield 4;
+}
+
+
+for (let value of secondGenerator()) {
+	console.log(value)
+}
+
+        </script>
+    </body>
+</html>
